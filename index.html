@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customised Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper w-[100vw] h-[100vh]  flex justify-center items-center">
+        <div class="Container flex flex-col">
+            <div>
+                <h1 class="text-[var(--pl-white)] opacity-75 uppercase tracking-[2px] leading-[1.2] text-3xl pb-2">
+                    Password Generator</h1>
+            </div>
+            <div
+                class="password-container flex justify-between w-[100%] relative  bg-[var(--dk-violet)]  rounded-2xl  p-[0.4rem] pr-10 border-b-[0.35rem] border-[var(--lt-violet2)] mb-4">
+                <input
+                    class="bg-[var(--dk-violet)] translate-x-6 font-[300] text-[1.5rem] leading-[30px] tracking-[1px]  w-[100%] border-none text-[var(--vb-yellow)]"
+                    type="text" placeholder="Password" readonly password-display>
+                <div> <button copy-Btn class="absolute scale-110">
+                        <span data-copyMsg class=""></span>
+                        <img src="./passwordGenerator/passwordGenerator/assets/copy.svg" alt="" width="23" height="23">
+                    </button>
+                </div>
+            </div>
+            <div
+                class="password-hero-section w-[100%] bg-[var(--dk-violet)] rounded-[1rem] p-[2rem] border-b-[0.35rem] border-[var(--lt-violet2)]">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-[var(--pl-white)] text-[1.5rem]">Password length</h2>
+                    <p class="number password-length text-[var(--vb-yellow)] text-[1.5rem]">10</p>
+                </div>
+                
+                    <input  type="range" min="1" max="20" class="slider w-[100%] rounded-[1rem] h-[0.75rem] cursor-pointer border-none appearance-none bg-[ var(--lt-violet)]">
+                
+                <div class="checkbox-container flex flex-col">
+
+                    <div class=" check flex items-center mx-[1rem] gap-[2rem]">
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Includes Uppercase letters</label>
+                    </div>
+                    <div class="check flex items-center mx-[1rem] gap-[2rem]">
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Includes Lowercase letters</label>
+                    </div>
+                    <div class=" check flex items-center mx-[1rem] gap-[2rem]">
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Includes Numbers </label>
+                    </div>
+                    <div class=" check flex items-center mx-[1rem] gap-[2rem]">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Includes Symbols </label>
+                    </div>
+                </div>
+                <!-- strength section -->
+                <div class="strength-container flex justify-between items-center mt-[1.75rem] mb-[2rem]">
+                    <p class="text-[var(--pl-white)] text-[1.5rem]">Strength</p>
+                    <div class="strength-circle w-[1.5rem] h-[1.5rem] rounded-full"></div>
+                </div>
+                <!-- generate password section -->
+                <button class="generateBtn flex justify-center text-center items-center rounded-[0.75rem] bg-[var(--vb-violet)] border-b-[0.35rem] tracking-[1px] border-[var(--vb-yellow)] w-[100%] px-[1rem] uppercase font-[600] text-[1rem] text-[var(--vb-yellow)] pl-2">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
